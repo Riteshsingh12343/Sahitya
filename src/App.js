@@ -3,11 +3,11 @@ import './App.css';
 import "./style.scss" ;
 import "./media-querry.css"; 
 import Home from './pages/Home';
-import {Routes, Route ,useNavigate} from "react-router-dom";
+import {Routes, Route ,useNavigate, Navigate} from "react-router-dom";
 import {ToastContainer} from "react-toastify" ;
 import "react-toastify/dist/ReactToastify.css";
 import Detail from './pages/Detail';
-import AddEditingBlog from './pages/AddEditingBlog';
+import AddEditBlog from './pages/AddEditBlog';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 import Header from './components/Header';
@@ -52,8 +52,17 @@ function App() {
      <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/detail/:id' element={<Detail />} />
-      <Route path='/create' element={<AddEditingBlog /> } />
-      <Route path='/update/:id' element={<AddEditingBlog />}/>
+      <Route 
+        path='/create'
+        element={ user?.uid ? <AddEditBlog user={user} /> : <Navigate  to="/"/> 
+        }
+      />
+      <Route 
+          path='/update/:id' 
+          element={ user?.uid ? <AddEditBlog user={user} /> : <Navigate  to="/"/> 
+          } 
+      />
+
       <Route path='/about' element={<About />}/>
       <Route path ='/auth' element={<Auth setActive={setActive} /> } />
       <Route path='#' element={<NotFound />}/>
