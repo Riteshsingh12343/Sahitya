@@ -41,9 +41,9 @@ const BlogSection = ({
                     <div className="short-description text-start">
                         {excerpt(item.description, 120)}
                     </div>
-                    {/* <Link to={`/detail/${id}`}> */}
+                    <Link to={`/detail/${item.id}`}>
                         <button className="btn btn-read">Read More</button>
-                    {/* </Link> */}
+                    </Link>
                     {/* {user && user.uid === userId && ( */}
                         <div style={{ float: "right" }}>
                             <FontAwesome
