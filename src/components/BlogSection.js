@@ -14,8 +14,9 @@ const BlogSection = ({
     //   timestamp,
     blogs,
     user,
-    //   handleDelete,
+       handleDelete,
 }) => {
+    const userId = user?.uid ;
     return (
         <div>
             <div className="blog-heading text-start py-2 mb-4"> Daily Blogs</div>
@@ -44,23 +45,25 @@ const BlogSection = ({
                     <Link to={`/detail/${item.id}`}>
                         <button className="btn btn-read">Read More</button>
                     </Link>
-                    {/* {user && user.uid === userId && ( */}
+                    {user?.uid && userId === user.uid && (
                         <div style={{ float: "right" }}>
+                        <FontAwesome
+                            name="trash"
+                            style={{ margin: "15px", cursor: "pointer" }}
+                            size="2x"
+                             onClick={() => handleDelete(item.id)}
+                        />
+                        <Link to={`/update/${item.id}`}>
                             <FontAwesome
-                                name="trash"
-                                style={{ margin: "15px", cursor: "pointer" }}
+                                name="edit"
+                                style={{ cursor: "pointer" }}
                                 size="2x"
-                                // onClick={() => handleDelete(id)}
                             />
-                            {/* <Link to={`/update/${id}`}> */}
-                                <FontAwesome
-                                    name="edit"
-                                    style={{ cursor: "pointer" }}
-                                    size="2x"
-                                />
-                            {/* </Link> */}
-                        </div>
-                    {/* )} */}
+                        </Link>
+                    </div>
+                    )}
+                        
+                   
                 </div>
             </div>
        ))}

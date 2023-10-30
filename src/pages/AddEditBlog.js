@@ -77,7 +77,7 @@ const AddEditBlog = ({ user, setActive }) => {
     };
 
     file && uploadFile();
-  }, [file]);
+  }, [file]); 
 
   useEffect(() => {
     id && getBlogDetail();
