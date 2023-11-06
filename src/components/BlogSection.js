@@ -39,13 +39,13 @@ const BlogSection = ({
                             {item.timestamp.toDate().toDateString()}
                         </span>
                     </div>
-                    <div className="short-description text-start">
+                    <div className="short-description text-start color">
                         {excerpt(item.description, 120)}
                     </div>
                     <Link to={`/detail/${item.id}`}>
                         <button className="btn btn-read">Read More</button>
                     </Link>
-                    {user?.uid && userId === user.uid && (
+                    {userId && item.userId === userId && (
                         <div style={{ float: "right" }}>
                         <FontAwesome
                             name="trash"

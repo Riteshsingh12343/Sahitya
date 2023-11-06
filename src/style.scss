@@ -1,4 +1,7 @@
-$yellow:#f5bc04;
+$yellow:#de8139f9;
+*body{
+	background-color: #000000b9;
+}
 
 @mixin border-radius($radius) {
 	-webkit-border-radius: $radius;
@@ -57,7 +60,7 @@ $yellow:#f5bc04;
 	@include clip-path(polygon(100% 0, 100% 85%, 14% 85%, 0 100%, 0% 60%, 0 0));
 }
 .navbar-light .navbar-nav .nav-link {
-	color: #222!important;
+	color: #fff4f4!important;
 	padding-top: 12px!important;
 	padding-bottom: 15px!important;
 	padding-left: 20px!important;
@@ -80,7 +83,7 @@ $yellow:#f5bc04;
 }
 
 .bg-faded {
-    background-color: #f7f7f7;
+    background-color: #056ded;
   }
 
 .mobile_logo_width {
@@ -95,7 +98,7 @@ $yellow:#f5bc04;
 // form
 .heading {
     font-size: 20px;
-	color: #424040;
+	color: #3d3d3d;
     font-weight: 600;
 }
 
@@ -178,7 +181,7 @@ $yellow:#f5bc04;
 
 .blog-heading {
 	font-size: 24px;
-	color: #222;
+	color: #ffffff;
     border-bottom: 1px solid #777;
 }
 
@@ -204,7 +207,7 @@ $yellow:#f5bc04;
 
 .title {
     font-size: 17px;
-	color: #222!important;
+	color: #c3ac77!important;
 	font-weight: 800;
     font-family: "Poppins";
     text-decoration: none;
@@ -217,7 +220,7 @@ $yellow:#f5bc04;
     position: relative;
     background-color: #4287f5;
     padding: 4px 8px;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 13px;
     text-transform: none;
@@ -236,7 +239,7 @@ $yellow:#f5bc04;
 
 .meta-info {
     font-size: 15px;
-	color: #222;
+	color: #cccbcb;
 	display: block;
     font-family: "Poppins";
     text-decoration: none;
@@ -256,7 +259,7 @@ $yellow:#f5bc04;
 
 .short-description {
     font-size: 14px;
-	color: #777;
+	color: #99f4c8;
 }
 
 .btn-read {
@@ -291,7 +294,7 @@ $yellow:#f5bc04;
 		left: 0;
 		right: 0;
 		z-index: 10;
-		background: rgba(0,0,0,.4);
+		background: rgba(250, 249, 249, 0.4);
     }
 
     .blog-title {
@@ -347,9 +350,9 @@ $yellow:#f5bc04;
     text-decoration: none;
 }
 .tag {
-	background: #f1f1f1;
+	background: #bfacac;
 	padding: 10px 15px;
-	color: #222;
+	color: #000000;
 	@include transition(0.5s);
 	margin-right: 8px;
 	margin-top: 5px;
@@ -375,7 +378,7 @@ $yellow:#f5bc04;
 
 .most-popular-font-meta {
     font-size: 12px;
-	color: #777;
+	color: #ffffff;
 }
 
 // Trending
@@ -537,7 +540,7 @@ $yellow:#f5bc04;
 		width: 50px;
 		height: 50px;
 		display: table;
-		background: rgba(0,0,0,.5);
+		background: rgba(255, 252, 252, 0.5);
 		color: white;
 		text-align: center;
 		@include border-radius(4px);
@@ -638,7 +641,7 @@ $yellow:#f5bc04;
 .btn_mange_pagging {
 	background: #dadada;
 	padding: 12px 20px;
-	color: #222!important;
+	color: #ffffff!important;
 	font-weight: 800;
 	margin: 0 10px;
 	border-radius: 10px;
@@ -653,7 +656,7 @@ $yellow:#f5bc04;
 
 .btn_pagging {
 	background: #dadada!important;
-	color: #222;
+	color: #8c8b8b;
 	padding: 12px 20px!important;
 	font-weight: 800;
 	margin: 0 10px;
@@ -661,7 +664,7 @@ $yellow:#f5bc04;
 }
 
 .btn_pagging:hover, .btn_pagging:focus {
-	background: #222!important;
+	background: #393939!important;
 	color: #fff;
 }
 
@@ -671,4 +674,7 @@ $yellow:#f5bc04;
 	overflow-x: hidden;
 	overflow-y: auto;
 	text-align:justify;
+}
+.text-start{
+ color: #f6f4f4;
 }
